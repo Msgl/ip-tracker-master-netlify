@@ -1,0 +1,22 @@
+{
+  "name": "ip-tracker-master-netlify",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP Address Tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o src/css",
+    "netlify": "./node_modules/.bin/netlify",
+    "watch:all": "parallelshell \"npm run scss\"  \"netlify dev\" "
+  },
+  "author": "Maria Glynou",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "parallelshell": "^3.0.1"
+  }
+}
